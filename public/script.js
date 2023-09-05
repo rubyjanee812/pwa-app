@@ -358,6 +358,6 @@ if ('serviceWorker' in navigator) {
 if (navigator.storage.estimate) {
   updateQuota();
 } else {
-  alert('StorageManager: estimate() method not supported');
+  alert('StorageManager: estimate() method will available on Safari iOS 17');
 }
 updateCount();
