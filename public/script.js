@@ -120,6 +120,7 @@ function updateQuota() {
     })
     .catch((err) => {
       console.error('*** Unable to update quota ***', err);
+      alert('Unable to update quota');
     })
     .then(() => {
       setTimeout(() => {
@@ -356,5 +357,7 @@ if ('serviceWorker' in navigator) {
 /* Start updating the quota values */
 if (navigator.storage.estimate) {
   updateQuota();
+} else {
+  alert('StorageManager: estimate() method not supported');
 }
 updateCount();
