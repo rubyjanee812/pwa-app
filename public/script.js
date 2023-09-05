@@ -104,7 +104,7 @@ function formatToMB(val) {
   } catch (ex) {
     result = Math.round(val / ONE_MEG);
   }
-  return `${result} MB`;
+  return ` ${result} MB`;
 }
 
 /* Update the Quota using StorageManager */
